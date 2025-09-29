@@ -1,5 +1,37 @@
 
+.container{
+    width: 400px;
+    height: 500px;
 
-* {
-    box-sizing: border-box;
+    border: 1px solid black;
+
+    margin: auto;
+}
+
+.container div{
+    height: 20.6%;
+    display: flex;
+}
+
+.container div div{
+    height: 100%;
+    
+    flex:3;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.container div input{
+    border-radius: 10px;
+    margin: 10px;
+    flex:8;
+}
+
+.container div button{
+    width: 50%;
+    border-radius: 10px;
+    margin: 10px;
+    
 }
