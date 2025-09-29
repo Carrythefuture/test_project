@@ -1,0 +1,45 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+}
+.container h1 {
+    margin-bottom: 60px;
+}
+.inputLogin {
+  display: flex;
+  align-items: center; /* 세로 중앙정렬 */
+  margin-bottom: 8px;
+}
+
+.inputLogin label {
+  width: 50px; /* 라벨 고정 폭 */
+  text-align: right; /* 오른쪽 정렬해서 input과 맞춤 */
+  margin-right: 8px;}
+
+.inputLogin input {
+  width: 220px;
+  padding: 4px;
+}
+
+.btns {
+  display: flex;
+  gap: 10px; /* 버튼 사이 간격 */
+  justify-content: center; /* 버튼 가운데 정렬 */
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+}
