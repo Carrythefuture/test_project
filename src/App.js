@@ -1,10 +1,13 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
-import styles from './App.module.css';
-import { useState } from 'react';
-import axios from 'axios';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+
 import Join from './pages/Join/Join';
 import Login from './pages/Login/Login';
+import Main from './pages/Main/Main';
+
+
+
 
 function App() {
 
@@ -13,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='join' element={<Join />} />
+        <Route path='main' element={<Main />} />
       </Routes>
     </BrowserRouter>
   );

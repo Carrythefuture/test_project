@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
 import styles from './Login.module.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
-
+    const navi = useNavigate();
     const [login, setLogin] = useState({
         id: "", pw: ""
     });
@@ -15,9 +16,13 @@ const Login = () => {
     }
     const LoginBtn = () => {
         console.log(login);
-        axios.post("http://10.5.5.19/auth/login", login).then(resp => {
+        axios.post("http://10.5.5.20/auth/login", login).then(resp => {
             setLogin({ id: "", pw: "" })
             console.log(resp);
+            if(resp.data == "success")
+            {
+                navi("/main");
+            }
         });
     }
 
