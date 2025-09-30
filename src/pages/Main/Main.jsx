@@ -16,10 +16,18 @@ const Main = () => {
     }
 
     const secessionBtn = () => {
-         axios.delete(`http://10.5.5.20/auth/${user}`).then(() => {
+        axios.delete(`http://10.5.5.20/auth/${user}`).then(() => {
             logout();
-        navi("/");
-         });
+            navi("/");
+        });
+    }
+
+    const mypageBtn = () => {
+        axios.get(`http://10.5.5.20/auth/myPage/${user}`).then((resp) => {
+            console.log("지금");
+            console.log(resp.data );
+            navi("/mypage", {state:resp.data});
+        });
     }
 
     return (
@@ -27,7 +35,7 @@ const Main = () => {
             <h2>환영합니다!</h2>
             <div className={styles.btns}>
                 <button>회원게시판</button>
-                <button>마이페이지</button>
+                <button onClick={mypageBtn}>마이페이지</button>
                 <button onClick={logoutBtn}>로그아웃</button>
                 <button onClick={secessionBtn}>회원탈퇴</button>
             </div>

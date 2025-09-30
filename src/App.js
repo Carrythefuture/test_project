@@ -5,6 +5,7 @@ import useAuthStore from './store/auth_store';
 import Join from './pages/Join/Join';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
+import Mypage from './pages/Mypage/Mypage';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/' element={isLogin ? <Main /> : <Login />} />
         <Route path='join' element={<Join />} />
         <Route path='main' element={<Main />} />
+        <Route path='mypage' element={<Mypage />} />
       </Routes>
     </BrowserRouter>
   );

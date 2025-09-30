@@ -5,14 +5,15 @@ import { create } from 'zustand';
 // set : 보관할 상태들을 안에 생성함 , set이 상태 값들을 수정하기 위해 필요한 함수임
 const useAuthStore = create((set) => ({
     user: "",
+    token: "",
     isLogin: false,
-    login: (user) => {
+    login: (user,token) => {
         sessionStorage.setItem("loginId", user);
-        set({ user: user, isLogin: true })
+        set({ user: user,token, isLogin: true })
     },
     logout: () => {
         sessionStorage.removeItem("loginId");
-        set({ user: "", isLogin: false })}
+        set({ user: "", token:"",isLogin: false })}
 }));
 
 export default useAuthStore;
