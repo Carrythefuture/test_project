@@ -29,12 +29,19 @@ const Main = () => {
             navi("/mypage", {state:resp.data});
         });
     }
+        const boardBtn = () => {
+        axios.get(`http://10.5.5.20/board`).then((resp) => {
+            console.log("지금");
+            console.log(resp.data );
+            navi("/board", {state:resp.data});
+        });
+    }
 
     return (
         <div className={styles.container}>
             <h2>환영합니다!</h2>
             <div className={styles.btns}>
-                <button>회원게시판</button>
+                <button onClick={boardBtn}>회원게시판</button>
                 <button onClick={mypageBtn}>마이페이지</button>
                 <button onClick={logoutBtn}>로그아웃</button>
                 <button onClick={secessionBtn}>회원탈퇴</button>

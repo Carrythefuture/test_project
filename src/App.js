@@ -6,6 +6,8 @@ import Join from './pages/Join/Join';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import Mypage from './pages/Mypage/Mypage';
+import Board from './pages/Board/Board';
+import BoardDetail from './pages/BoardDetail/BoardDetail';
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
         <Route path='join' element={<Join />} />
         <Route path='main' element={<Main />} />
         <Route path='mypage' element={<Mypage />} />
+        <Route path='board' element={<Board />} />
+        <Route path='board/:seq' element={<BoardDetail />} />
       </Routes>
     </BrowserRouter>
   );

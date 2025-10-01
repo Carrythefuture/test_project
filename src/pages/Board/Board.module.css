@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* 게시판 전체 */
+.board {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 2fr; /* 컬럼 비율 */
+  border-top: 2px solid #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 헤더 (첫 줄) */
+.board > div:nth-child(-n+4) {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid #aaa;
+}
+
+/* 각 행 */
+.content {
+  display: contents; /* grid row 안에서 각 div가 그대로 들어가도록 */
+}
+
+.content div {
+  padding: 8px 5px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 제목만 왼쪽 정렬 */
+.content div:nth-child(2) {
+  justify-content: center;
+  padding-left: 10px;
+}
+
+/* hover 효과 */
+.content:hover div {
+  background-color: #fafafa;
+}
